@@ -23,7 +23,7 @@ public final class Logic {
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (Cell cell : steps) {
             for (Figure figure : figures) {
-                if (cell != null && cell.equals(figure.position())) {
+                if (figure != null && cell.equals(figure.position())) {
                     throw new OccupiedCellException("This figure can't jump over the other pieces");
                 }
             }
